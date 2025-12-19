@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="tr" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 YouTube Gelir & Maaş Hesaplama - HesaplamaPro</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+
+    <!-- Strict CSP (Güvenlik) - frame-ancestors kaldırıldı -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; img-src 'self' data:; font-src https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; upgrade-insecure-requests;">
+    
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="YouTube geliri, 2025 net maaş ve freelance saatlik ücret hesaplama aracı. Güncel vergi dilimleri, RPM oranları ve kesintilerle tahmini kazancınızı hesaplayın.">
+    <meta name="author" content="HesaplamaPro">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://www.hesaplamapro.com/">
+    
+    <!-- Dil Alternatifleri (i18n) -->
+    <link rel="alternate" hreflang="tr" href="https://www.hesaplamapro.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://www.hesaplamapro.com/" />
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.hesaplamapro.com/">
+    <meta property="og:title" content="2025 YouTube Gelir & Maaş Hesaplama Aracı">
+    <meta property="og:description" content="İçerik üreticileri ve çalışanlar için gelişmiş gelir hesaplama motoru. YouTube RPM, Net Maaş ve Freelance ücretini tek tıkla hesaplayın.">
+    <meta property="og:image" content="https://www.hesaplamapro.com/assets/social-preview.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="HesaplamaPro">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.hesaplamapro.com/">
+    <meta name="twitter:title" content="2025 YouTube Gelir & Maaş Hesaplama Aracı">
+    <meta name="twitter:description" content="YouTube RPM, Net Maaş ve Freelance ücretini güncel 2025 verileriyle hesaplayın.">
+    <meta name="twitter:image" content="https://www.hesaplamapro.com/assets/social-preview.jpg">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "name": "HesaplamaPro",
+          "url": "https://www.hesaplamapro.com",
+          "description": "YouTube geliri, 2025 net maaş ve freelance saatlik ücret hesaplama aracı.",
+          "applicationCategory": "FinanceApplication",
+          "operatingSystem": "All",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "TRY"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "RPM nedir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "RPM (Revenue Per Mille), her 1000 video gösterimi başına içerik üreticisinin kazanabileceği tahmini gelirdir. YouTube kesintisi sonrası üreticiye kalan ortalama geliri ifade eder."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "1000 izlenme kaç TL kazandırır?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Bu miktar içeriğe, izleyici kitlesine ve reklam talebine göre büyük ölçüde değişebilir. Sabit bir rakam vermek yanıltıcı olabilir ancak Türkiye ve ABD gibi farklı pazarlarda ortalamalar farklılık gösterir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Shorts gelirleri neden düşüktür?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Shorts akışında reklamlar videolar arasında gösterilir ve hızlı geçildiği için etkileşim genellikle düşüktür. Bu nedenle RPM oranları uzun videolara kıyasla daha düşük seyredebilir."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "CPM ve RPM farkı nedir?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "CPM reklam verenin ödediği brüt ücrettir. RPM ise YouTube payı kesildikten sonra üreticinin cebine girmesi muhtemel tahmini kazancı temsil eder."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out',
+                        'slide-up': 'slideUp 0.4s ease-out',
+                        'scale-in': 'scaleIn 0.2s ease-out',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(10px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } },
+                        scaleIn: { '0%': { transform: 'scale(0.95)', opacity: '0' }, '100%': { transform: 'scale(1)', opacity: '1' } }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f2f2f7;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.5) 2px, transparent 2px),
+            linear-gradient(90deg, rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+        .input-focus-ring:focus-within { 
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); 
+            border-color: #3b82f6; 
+        }
+        .highlight { color: #2563eb; }
+        input[type=range] { accent-color: #000; }
+        
+        /* Tooltip Style */
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip); 
+            position: absolute; 
+            bottom: 100%; 
+            left: 50%; 
+            transform: translateX(-50%);
+            background-color: #111; 
+            color: #fff; 
+            padding: 0.5rem 1rem; 
+            border-radius: 0.5rem; 
+            font-size: 0.75rem;
+            white-space: nowrap; 
+            z-index: 50; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); 
+            margin-bottom: 0.5rem; 
+            pointer-events: none;
+        }
+        [data-i18n] { transition: opacity 0.2s ease; }
+        
+        /* Details Summary Animation */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: fadeIn 0.3s ease-in-out; }
+        
+        /* Custom Scrollbar */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-4 md:p-8 font-sans text-gray-800" onload="loadFromURL()">
+
+    <!-- Header Area (Top Ad & Share) -->
+    <div class="w-full max-w-6xl flex flex-col md:flex-row justify-between items-center mb-6 gap-4">
+        <!-- Top Leaderboard Ad -->
+        <div class="w-full md:w-[728px] h-[90px] bg-gray-200/50 border-2 border-dashed border-gray-300 rounded-xl flex items-center justify-center text-gray-400 text-sm cursor-default hover:bg-gray-100 transition-colors">
+            <div class="text-center">
+                <span class="font-bold block" data-i18n="adSpace">REKLAM ALANI (728x90)</span>
+                <span class="text-xs">Google Ads Kodu Buraya</span>
+            </div>
+        </div>
+        
+        <div class="flex items-center gap-3 ml-auto w-full md:w-auto justify-end">
+             <!-- Share Button (Fixed ID Added) -->
+             <button onclick="shareResult()" id="share-btn" class="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/20 rounded-full px-5 py-2.5 flex items-center gap-2 transition-all text-sm font-bold active:scale-95 border border-transparent">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+                <span id="share-text" data-i18n="btnShare">Paylaş</span>
+            </button>
+
+            <!-- Language Switcher -->
+            <button onclick="toggleLanguage()" class="bg-white/80 backdrop-blur border border-gray-200 hover:border-black/20 shadow-sm rounded-full px-4 py-2.5 flex items-center gap-2 transition-all hover:shadow-md group">
+                <span class="text-sm font-bold w-6 text-center" id="lang-display">TR</span>
+                <svg class="w-4 h-4 text-gray-400 group-hover:text-black transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="w-full max-w-6xl bg-white/90 shadow-2xl rounded-3xl overflow-hidden border border-white/50 backdrop-blur-xl flex flex-col md:flex-row min-h-[750px] animate-slide-up relative">
+        
+        <!-- Sidebar Navigation -->
+        <nav class="w-full md:w-72 bg-gray-50/80 border-b md:border-b-0 md:border-r border-gray-200 flex md:flex-col shrink-0 z-10">
+            <div class="p-6 border-b border-gray-200/50 hidden md:block">
+                <h1 class="text-xl font-bold tracking-tight text-gray-900">Hesaplama<span class="text-blue-600">Pro</span></h1>
+                <p class="text-xs text-gray-500 mt-1" data-i18n="appSubtitle">2025 Finansal Araç Seti</p>
+            </div>
+
+            <div class="flex md:flex-col overflow-x-auto md:overflow-visible no-scrollbar p-2 space-x-2 md:space-x-0 md:space-y-3">
+                <button onclick="switchTab('youtube')" id="btn-youtube" class="nav-btn group flex items-center w-full p-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-white hover:shadow-sm relative">
+                    <div class="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg>
+                    </div>
+                    <span data-i18n="menuYoutube">YouTube Gelir</span>
+                </button>
+                <button onclick="switchTab('salary')" id="btn-salary" class="nav-btn group flex items-center justify-between w-full p-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-white hover:shadow-sm">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-lg bg-green-100 text-green-600 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <span data-i18n="menuSalary">Net Maaş</span>
+                    </div>
+                    <span class="bg-orange-100 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm whitespace-nowrap" data-i18n="tagPopular">🔥 Popüler</span>
+                </button>
+                <button onclick="switchTab('freelance')" id="btn-freelance" class="nav-btn group flex items-center justify-between w-full p-3 rounded-xl text-sm font-medium transition-all duration-200 hover:bg-white hover:shadow-sm">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <span data-i18n="menuFreelance">Freelance Saatlik</span>
+                    </div>
+                    <span class="bg-purple-100 text-purple-700 text-[10px] font-bold px-2 py-0.5 rounded-full shadow-sm" data-i18n="tagNew">✨ Yeni</span>
+                </button>
+            </div>
+            
+            <!-- Sidebar Ad (Vertical) -->
+            <div class="mt-auto p-4 hidden md:block">
+                <div class="w-full h-64 bg-gray-100 border-2 border-dashed border-gray-300 rounded-lg flex flex-col items-center justify-center text-gray-400 text-xs text-center">
+                    <span class="font-bold block mb-1" data-i18n="adSpaceSmall">REKLAM</span>
+                    (300x250)
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 bg-white p-6 md:p-10 overflow-y-auto relative scroll-smooth">
+            
+            <!-- YOUTUBE TAB -->
+            <div id="tab-youtube" class="tab-content hidden animate-fade-in pb-10">
+                <header class="mb-8 border-b border-gray-100 pb-6">
+                    <h2 class="text-3xl font-bold text-gray-900" data-i18n="ytTitle">YouTube Gelir Hesaplama</h2>
+                    <p class="text-gray-500 mt-2 text-sm" data-i18n="ytSubtitle">2025 güncel reklam oranları ile tahmini kazancınızı analiz edin.</p>
+                </header>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
+                    <!-- Control Panel (Left Side) -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 space-y-6 shadow-sm relative">
+                            
+                            <!-- Video Type Selector -->
+                            <div class="flex bg-gray-200 p-1.5 rounded-xl shadow-inner">
+                                <button onclick="setVideoType('long')" id="btn-type-long" class="flex-1 py-2.5 rounded-lg text-sm font-bold shadow-sm bg-white text-black transition-all flex justify-center items-center gap-2">
+                                    📹 <span data-i18n="videoLong">Video (Uzun)</span>
+                                </button>
+                                <button onclick="setVideoType('shorts')" id="btn-type-shorts" class="flex-1 py-2.5 rounded-lg text-sm font-semibold text-gray-500 hover:text-gray-700 transition-all flex justify-center items-center gap-2">
+                                    📱 <span data-i18n="videoShorts">Shorts</span>
+                                </button>
+                            </div>
+
+                            <!-- Views Input -->
+                            <div class="input-focus-ring rounded-xl transition-shadow duration-200 bg-white">
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1" data-i18n="labelViews">Günlük İzlenme</label>
+                                <input type="number" id="yt-views" 
+                                    class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-xl font-bold text-gray-900 focus:outline-none transition-colors" 
+                                    placeholder="50000" 
+                                    max="999999999" 
+                                    oninput="limitInput(this); calculateYouTube()">
+                            </div>
+                            
+                            <!-- Custom Category Dropdown -->
+                            <div class="input-focus-ring rounded-xl transition-shadow duration-200 z-50">
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1" data-i18n="labelCategory">İçerik Kategorisi</label>
+                                <div class="relative" id="custom-category-dropdown">
+                                    <button onclick="toggleDropdown()" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3 text-left font-medium text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-100 hover:border-gray-300 transition-all flex justify-between items-center group">
+                                        <div class="flex items-center gap-3">
+                                            <span id="selected-icon" class="text-2xl">🎭</span>
+                                            <span id="selected-text" class="text-sm font-semibold">Eğlence / Vlog (Standart)</span>
+                                        </div>
+                                        <svg class="h-5 w-5 text-gray-400 group-hover:text-gray-600 transition-colors transform duration-200" id="dropdown-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                    </button>
+                                    
+                                    <div id="dropdown-menu" class="hidden absolute top-full left-0 w-full mt-2 bg-white rounded-xl shadow-xl border border-gray-100 z-50 overflow-hidden animate-scale-in origin-top">
+                                        <div class="p-1 space-y-1">
+                                            <div onclick="selectCategory('entertainment', '🎭', 'Eğlence / Vlog (Standart)')" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-50 rounded-lg cursor-pointer transition-colors group">
+                                                <span class="text-2xl group-hover:scale-110 transition-transform">🎭</span>
+                                                <div><div class="text-sm font-bold text-gray-900" data-i18n="catEnt">Eğlence / Vlog</div><div class="text-[10px] text-gray-400" data-i18n="catEntDesc">Standart reklam geliri</div></div>
+                                            </div>
+                                            <div onclick="selectCategory('gaming', '🎮', 'Oyun (Düşük RPM)')" class="flex items-center gap-3 px-4 py-3 hover:bg-red-50 rounded-lg cursor-pointer transition-colors group">
+                                                <span class="text-2xl group-hover:scale-110 transition-transform">🎮</span>
+                                                <div><div class="text-sm font-bold text-gray-900" data-i18n="catGame">Oyun</div><div class="text-[10px] text-gray-400 group-hover:text-red-500" data-i18n="catGameDesc">Düşük rekabet, düşük RPM</div></div>
+                                            </div>
+                                            <div onclick="selectCategory('education', '🎓', 'Eğitim / Bilgi (Yüksek RPM)')" class="flex items-center gap-3 px-4 py-3 hover:bg-blue-50 rounded-lg cursor-pointer transition-colors group">
+                                                <span class="text-2xl group-hover:scale-110 transition-transform">🎓</span>
+                                                <div><div class="text-sm font-bold text-gray-900" data-i18n="catEdu">Eğitim / Bilgi</div><div class="text-[10px] text-gray-400 group-hover:text-blue-500" data-i18n="catEduDesc">Stabil ve yüksek gelir</div></div>
+                                            </div>
+                                            <div onclick="selectCategory('finance', '💰', 'Finans / Kripto (Çok Yüksek RPM)')" class="flex items-center gap-3 px-4 py-3 hover:bg-green-50 rounded-lg cursor-pointer transition-colors group">
+                                                <span class="text-2xl group-hover:scale-110 transition-transform">💰</span>
+                                                <div><div class="text-sm font-bold text-gray-900" data-i18n="catFin">Finans / Kripto</div><div class="text-[10px] text-gray-400 group-hover:text-green-500" data-i18n="catFinDesc">En yüksek reklam geliri</div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="yt-category" value="entertainment">
+                                </div>
+                            </div>
+
+                            <!-- Region Buttons -->
+                            <div class="space-y-3">
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider ml-1" data-i18n="labelRegion">Hedef Kitle / Ülke</label>
+                                <div class="grid grid-cols-3 gap-3">
+                                    <button onclick="setRegion('TR')" id="btn-reg-tr" class="region-btn bg-white border-2 border-black/5 hover:border-red-500 text-gray-700 py-3 rounded-xl text-xs font-bold transition-all flex flex-col items-center justify-center gap-1 shadow-sm ring-2 ring-black ring-offset-2">
+                                        <span class="text-2xl">🇹🇷</span><span data-i18n="regionTR">Türkiye</span>
+                                    </button>
+                                    <button onclick="setRegion('US')" id="btn-reg-us" class="region-btn bg-white border-2 border-black/5 hover:border-green-500 text-gray-700 py-3 rounded-xl text-xs font-bold transition-all flex flex-col items-center justify-center gap-1 shadow-sm">
+                                        <span class="text-2xl">🇺🇸</span><span data-i18n="regionUS">ABD</span>
+                                    </button>
+                                    <button onclick="setRegion('GLOBAL')" id="btn-reg-global" class="region-btn bg-white border-2 border-black/5 hover:border-blue-500 text-gray-700 py-3 rounded-xl text-xs font-bold transition-all flex flex-col items-center justify-center gap-1 shadow-sm">
+                                        <span class="text-2xl">🌍</span><span data-i18n="regionGlobal">Global</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- RPM Slider -->
+                            <div class="input-focus-ring rounded-xl transition-shadow duration-200 pt-2">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="flex items-center gap-2">
+                                        <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider" data-i18n="labelRPM">BGBM / RPM</label>
+                                        <span class="text-[10px] px-2 py-0.5 rounded-full bg-gray-200 text-gray-600 font-bold" id="rpm-indicator">Standart</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-3">
+                                    <input type="range" id="yt-rpm-slider" min="1" max="100" step="0.1" value="30" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" oninput="syncRpm('slider')">
+                                    <div class="relative min-w-[100px]">
+                                        <input type="number" id="yt-rpm" value="30" class="w-full bg-white border border-gray-200 rounded-xl pl-3 pr-8 py-2 text-center font-bold text-gray-900 focus:outline-none focus:border-blue-500" max="999" oninput="limitInput(this); syncRpm('input')">
+                                        <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-gray-400 font-bold" id="currency-symbol">₺</span>
+                                    </div>
+                                </div>
+                                <p class="text-[10px] text-gray-500 mt-2 font-medium italic" id="rpm-dynamic-text" data-i18n="rpmNote">*Eğlence içerikleri ortalama gelir sağlar.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results Dashboard (Right Side) -->
+                    <div class="lg:col-span-5 flex flex-col gap-6">
+                        
+                        <!-- HIGH PRIORITY AD SLOT (Between inputs and result on mobile) -->
+                        <div class="w-full h-auto bg-gray-50 border-2 border-dashed border-blue-200 rounded-xl flex flex-col items-center justify-center text-gray-400 text-xs py-4 px-2 hover:bg-blue-50/30 transition-colors">
+                            <span class="font-bold text-blue-400" data-i18n="adSpaceSmall">ÖNERİLEN REKLAM</span>
+                            <span class="text-[10px]">(Sonuçtan önce gösterim)</span>
+                        </div>
+
+                        <!-- Result Card -->
+                        <div class="bg-black text-white rounded-3xl p-8 shadow-2xl relative overflow-hidden group flex-1 flex flex-col justify-between">
+                            <div class="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-red-600 to-purple-600 rounded-full blur-[80px] opacity-20 group-hover:opacity-40 transition-opacity duration-700"></div>
+                            
+                            <div class="relative z-10 space-y-6">
+                                <div>
+                                    <span class="text-white/50 text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+                                        <span data-i18n="resultMonthly">Aylık Tahmini Gelir</span>
+                                        <span class="bg-white/10 px-2 py-0.5 rounded text-[9px] text-white/80" data-i18n="labelEst">Tahmini</span>
+                                    </span>
+                                    <div class="relative inline-block cursor-help group/tooltip" id="yt-monthly-wrapper" data-tooltip="₺0,00">
+                                        <div class="text-5xl md:text-6xl font-black tracking-tight mt-3 result-anim truncate" id="yt-monthly">₺0</div>
+                                    </div>
+                                </div>
+
+                                <div class="text-[9px] text-white/40 leading-relaxed border-b border-white/10 pb-4" data-i18n="ytDisclaimerLong">
+                                    Bu hesaplama, RPM (1000 gösterim başına kazanç) değerine göre yapılmıştır.
+                                </div>
+                                
+                                <div class="space-y-4 pt-2">
+                                    <div class="flex justify-between items-center group/item hover:bg-white/5 p-3 rounded-lg transition-colors relative cursor-help" id="yt-daily-wrapper" data-tooltip="₺0,00">
+                                        <span class="text-white/50 text-xs uppercase tracking-wider" data-i18n="resultDaily">Günlük</span>
+                                        <span class="text-xl font-medium result-anim" id="yt-daily">₺0</span>
+                                    </div>
+                                    <div class="flex justify-between items-center group/item hover:bg-white/5 p-3 rounded-lg transition-colors relative cursor-help" id="yt-yearly-wrapper" data-tooltip="₺0,00">
+                                        <span class="text-white/50 text-xs uppercase tracking-wider" data-i18n="resultYearly">Yıllık</span>
+                                        <span class="text-xl font-medium result-anim text-green-400" id="yt-yearly">₺0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Information Box -->
+                        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-5 relative overflow-hidden">
+                            <div class="flex items-start gap-3 relative z-10">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-blue-900 mb-1" data-i18n="whyTitle">Neden Bu Kadar?</h4>
+                                    <p class="text-xs text-blue-800/80 leading-relaxed" data-i18n="whyDesc">
+                                        YouTube gelirleri izleyici ülkesi, reklam talebi ve içerik türüne göre değişir. Finans ve Eğitim içerikleri genellikle daha yüksek RPM alır.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-blue-100/50 rounded-full blur-2xl"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <section class="max-w-4xl mx-auto border-t border-gray-200 pt-10">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span data-i18n="faqTitle">Sıkça Sorulan Sorular</span>
+                    </h3>
+                    <div class="space-y-4">
+                        <!-- FAQ 1 -->
+                        <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <summary class="flex justify-between items-center p-5 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors select-none">
+                                <span data-i18n="faq1q">RPM nedir?</span>
+                                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-transparent group-open:border-gray-100" data-i18n="faq1a">
+                                <strong>RPM (Revenue Per Mille)</strong>, her 1000 video gösterimi başına sizin kazandığınız net paradır. YouTube'un %45'lik kesintisi yapıldıktan sonra elinize geçen net tutarı ifade eder.
+                            </div>
+                        </details>
+                        <!-- FAQ 2 -->
+                        <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <summary class="flex justify-between items-center p-5 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors select-none">
+                                <span data-i18n="faq2q">CPM ve RPM farkı nedir?</span>
+                                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-transparent group-open:border-gray-100" data-i18n="faq2a">
+                                <strong>CPM</strong> reklam verenin ödediği brüt tutar, <strong>RPM</strong> ise sizin cebinize giren net paradır.
+                            </div>
+                        </details>
+                        <!-- FAQ 3 -->
+                        <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <summary class="flex justify-between items-center p-5 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors select-none">
+                                <span data-i18n="faq3q">1000 izlenme kaç TL kazandırır?</span>
+                                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-transparent group-open:border-gray-100" data-i18n="faq3a">
+                                Türkiye'de ortalama <strong>15 TL - 60 TL</strong>, ABD'de <strong>$3 - $15</strong> arasıdır.
+                            </div>
+                        </details>
+                        <!-- FAQ 4 -->
+                        <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                            <summary class="flex justify-between items-center p-5 cursor-pointer font-medium text-gray-800 hover:bg-gray-50 transition-colors select-none">
+                                <span data-i18n="faq4q">Shorts gelirleri neden düşük?</span>
+                                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </summary>
+                            <div class="p-5 pt-0 text-sm text-gray-600 leading-relaxed border-t border-transparent group-open:border-gray-100" data-i18n="faq4a">
+                                Reklamlar video aralarında geçildiği için etkileşim azdır, bu da RPM'i düşürür.
+                            </div>
+                        </details>
+                    </div>
+                </section>
+            </div>
+
+            <!-- SALARY TAB -->
+            <div id="tab-salary" class="tab-content hidden animate-fade-in">
+                 <header class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900" data-i18n="salTitle">2025 Net Maaş Hesaplama</h2>
+                    <p class="text-gray-500 mt-2 text-sm" data-i18n="salSubtitle">2025 yılı tahmini vergi dilimleri ve asgari ücret istisnaları (TR).</p>
+                </header>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-6">
+                         <div class="input-focus-ring rounded-xl transition-shadow duration-200 bg-white">
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1" data-i18n="labelGrossSalary">Aylık Brüt Maaş (TL)</label>
+                            <input type="number" id="sal-gross" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-xl font-bold text-gray-900 focus:outline-none transition-colors" placeholder="40000" oninput="limitInput(this); calculateSalary()" max="999999999">
+                        </div>
+                        <div class="flex items-center justify-between bg-blue-50 p-4 rounded-xl border border-blue-100">
+                            <div><div class="text-sm text-blue-900 font-bold" data-i18n="labelTaxExemption">Gelir Vergisi İstisnası</div><div class="text-xs text-blue-600/80 mt-1" data-i18n="descTaxExemption">Asgari ücret kadar kısım vergiden düşülür.</div></div>
+                            <label class="relative inline-flex items-center cursor-pointer"><input type="checkbox" id="sal-exemption" class="sr-only peer" checked onchange="calculateSalary()"><div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:bg-blue-600 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div></label>
+                        </div>
+                        <div class="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm">
+                            <table class="w-full text-sm text-left text-gray-500"><tbody class="divide-y divide-gray-100"><tr class="bg-white"><td class="px-6 py-3">SGK (%14)</td><td class="px-6 py-3 text-right font-medium text-red-500" id="sal-sgk">-₺0</td></tr><tr class="bg-white"><td class="px-6 py-3" data-i18n="labelUnemp">İşsizlik Sig. (%1)</td><td class="px-6 py-3 text-right font-medium text-red-500" id="sal-issizlik">-₺0</td></tr><tr class="bg-white"><td class="px-6 py-3" data-i18n="labelIncomeTax">Gelir Vergisi</td><td class="px-6 py-3 text-right font-medium text-red-500" id="sal-gv">-₺0</td></tr><tr class="bg-white"><td class="px-6 py-3" data-i18n="labelStampTax">Damga Vergisi</td><td class="px-6 py-3 text-right font-medium text-red-500" id="sal-dv">-₺0</td></tr></tbody></table>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-between space-y-4">
+                        <div class="bg-gradient-to-br from-green-600 to-emerald-800 text-white rounded-3xl p-8 shadow-2xl flex-1 flex flex-col justify-center items-center text-center relative overflow-hidden">
+                             <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=\'20\' height=\'20\' viewBox=\'0 0 20 20\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M1 1h2v2H1V1zm4 0h2v2H5V1zm4 0h2v2H9V1zm4 0h2v2h-2V1zm4 0h2v2h-2V1z\' fill=\'%23ffffff\' fill-opacity=\'0.4\' fill-rule=\'evenodd\'/%3E%3C/svg%3E');"></div>
+                             <span class="relative z-10 text-emerald-100 text-xs font-bold uppercase tracking-widest mb-4 border border-emerald-400/30 px-3 py-1 rounded-full" data-i18n="labelNetSalary">Ele Geçen Net Maaş</span>
+                            <div class="relative z-10 text-5xl md:text-6xl font-extrabold tracking-tight result-anim my-4" id="sal-net">₺0</div>
+                            <div class="relative z-10 bg-black/20 backdrop-blur-sm rounded-xl px-6 py-3 text-sm font-medium text-emerald-50"><span data-i18n="labelTotalDeduct">Toplam Kesinti:</span> <span id="sal-total-deduct" class="font-bold">₺0</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FREELANCE TAB -->
+            <div id="tab-freelance" class="tab-content hidden animate-fade-in">
+                <header class="mb-8"><h2 class="text-3xl font-bold text-gray-900" data-i18n="frTitle">Freelance Saatlik Ücret</h2><p class="text-gray-500 mt-2 text-sm" data-i18n="frSubtitle">Giderler ve vergiler sonrası hedef net geliri yakalamak için gereken ücret.</p></header>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="space-y-8">
+                         <div class="input-focus-ring rounded-xl transition-shadow duration-200 bg-white"><label class="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 ml-1" data-i18n="labelTargetInc">Aylık Hedef Net (TL)</label><input type="number" id="fr-target" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-4 text-xl font-bold text-gray-900 focus:outline-none transition-colors" placeholder="50000" oninput="limitInput(this); calculateFreelance()" max="999999999"></div>
+                        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-6">
+                            <h3 class="font-bold text-gray-800 border-b pb-2" data-i18n="headerParams">Çalışma Parametreleri</h3>
+                            <div class="grid grid-cols-2 gap-4"><div><label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1" data-i18n="labelWeeklyHours">Haftalık Saat</label><input type="number" id="fr-hours" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 font-medium" value="30" oninput="calculateFreelance()" max="168"></div><div><label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1" data-i18n="labelVacation">Yıllık Tatil (Hafta)</label><input type="number" id="fr-vacation" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-gray-900 font-medium" value="4" oninput="calculateFreelance()" max="52"></div></div>
+                            <div><div class="flex justify-between items-center mb-2"><label class="block text-xs font-bold text-gray-500 uppercase tracking-wider" data-i18n="labelOverhead">Gider & Vergi Marjı</label><span class="text-sm font-bold text-blue-600" id="fr-overhead-val">%30</span></div><input type="range" id="fr-overhead" min="0" max="60" value="30" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600" oninput="calculateFreelance()"></div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white border-2 border-gray-900 rounded-3xl p-8 shadow-xl flex flex-col justify-center items-center text-center relative group hover:border-blue-600 transition-colors duration-300">
+                            <span class="text-gray-500 text-xs font-bold uppercase tracking-widest mb-2" data-i18n="labelMinHourly">Min. Saatlik Ücret</span>
+                            <div class="text-5xl font-black text-gray-900 tracking-tighter result-anim group-hover:text-blue-600 transition-colors" id="fr-hourly">₺0</div>
+                            <div class="mt-4 w-full h-px bg-gray-100"></div>
+                            <div class="mt-4 grid grid-cols-2 gap-4 w-full"><div class="bg-gray-50 rounded-xl p-3"><span class="text-[10px] uppercase text-gray-400 font-bold block" data-i18n="labelYearlyGross">Yıllık Brüt Ciro</span><span class="text-lg font-bold text-gray-800" id="fr-yearly-gross">₺0</span></div><div class="bg-gray-50 rounded-xl p-3"><span class="text-[10px] uppercase text-gray-400 font-bold block" data-i18n="labelBillableHours">Faturalanabilir Saat</span><span class="text-lg font-bold text-gray-800" id="fr-total-hours">0</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-5xl mt-8 mb-4 border-t border-gray-200 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+        <div>© 2025 HesaplamaPro. Tüm hakları saklıdır.</div>
+        <div class="flex gap-4">
+            <a href="about.html" target="_blank" class="hover:text-gray-600 transition-colors" data-i18n="footerAbout">Hakkında</a>
+            <a href="terms.html" target="_blank" class="hover:text-gray-600 transition-colors" data-i18n="footerTerms">Kullanım Şartları</a>
+            <a href="privacy.html" target="_blank" class="hover:text-gray-600 transition-colors" data-i18n="footerPrivacy">Gizlilik</a>
+        </div>
+    </footer>
+
+    <script>
+        // --- SECURE SHARE LOGIC (FALLBACK) ---
+        function shareResult() {
+            const url = new URL(window.location.href);
+            
+            // Verileri Topla
+            const views = document.getElementById('yt-views').value;
+            const rpm = document.getElementById('yt-rpm').value;
+            const salary = document.getElementById('sal-gross').value;
+            const fTarget = document.getElementById('fr-target').value;
+            
+            // URL'ye Ekle
+            if(views) url.searchParams.set('v', views);
+            if(rpm) url.searchParams.set('r', rpm);
+            if(salary) url.searchParams.set('s', salary);
+            if(fTarget) url.searchParams.set('f', fTarget);
+
+            const urlStr = url.toString();
+
+            // Pano Kopyalama Yöntemleri
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                // Modern Yöntem (İzin Varsa)
+                navigator.clipboard.writeText(urlStr).then(showCopied).catch(() => useFallback(urlStr));
+            } else {
+                // Eski Yöntem (İframe/Kısıtlı Ortamlar için)
+                useFallback(urlStr);
+            }
+        }
+
+        function useFallback(text) {
+            const textArea = document.createElement("textarea");
+            textArea.value = text;
+            
+            // Görünmez yap ama seçilebilir olsun
+            textArea.style.position = "fixed";
+            textArea.style.left = "-9999px";
+            textArea.style.top = "0";
+            document.body.appendChild(textArea);
+            
+            textArea.focus();
+            textArea.select();
+            
+            try {
+                const successful = document.execCommand('copy');
+                if(successful) showCopied();
+                else alert("Kopyalama başarısız. Lütfen URL çubuğundan kopyalayın.");
+            } catch (err) {
+                console.error('Fallback copy failed', err);
+            }
+            
+            document.body.removeChild(textArea);
+        }
+
+        function showCopied() {
+            const btn = document.getElementById('share-text');
+            const original = btn.innerText;
+            btn.innerText = state.lang === 'tr' ? "Kopyalandı!" : "Copied!";
+            
+            // Buton rengini değiştir (Geri bildirim)
+            const btnEl = document.getElementById('share-btn');
+            
+            // Null check ekledik
+            if (!btnEl) {
+                console.error("Paylaş butonu bulunamadı (ID: share-btn)");
+                return;
+            }
+
+            btnEl.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+            btnEl.classList.add('bg-green-600', 'hover:bg-green-700');
+
+            setTimeout(() => {
+                btn.innerText = original;
+                btnEl.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                btnEl.classList.remove('bg-green-600', 'hover:bg-green-700');
+            }, 2000);
+        }
+
+        function loadFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            
+            if(params.has('v')) document.getElementById('yt-views').value = params.get('v');
+            if(params.has('r')) document.getElementById('yt-rpm').value = params.get('r');
+            if(params.has('s')) document.getElementById('sal-gross').value = params.get('s');
+            if(params.has('f')) document.getElementById('fr-target').value = params.get('f');
+
+            // Trigger calcs
+            calculateYouTube();
+            calculateSalary();
+            calculateFreelance();
+        }
+
+        /* --- STANDARD FUNCTIONS --- */
+        function limitInput(el) { if (el.value.length > 12) el.value = el.value.slice(0, 12); }
+        function toggleDropdown() { 
+            const menu = document.getElementById('dropdown-menu'); 
+            const arrow = document.getElementById('dropdown-arrow');
+            if (menu.classList.contains('hidden')) { menu.classList.remove('hidden'); arrow.classList.add('rotate-180'); document.addEventListener('click', closeDropdownOutside); } 
+            else { closeDropdown(); } 
+        }
+        function closeDropdown() { document.getElementById('dropdown-menu').classList.add('hidden'); document.getElementById('dropdown-arrow').classList.remove('rotate-180'); document.removeEventListener('click', closeDropdownOutside); }
+        function closeDropdownOutside(event) { if (!document.getElementById('custom-category-dropdown').contains(event.target)) closeDropdown(); }
+        function selectCategory(cat, icon, text) { 
+            document.getElementById('selected-icon').innerText = icon; 
+            document.getElementById('selected-text').innerText = text; 
+            document.getElementById('yt-category').value = cat; 
+            setCategory(); closeDropdown(); 
+        }
+
+        // Translation Data
+        const translations = {
+            tr: {
+                adSpace: "REKLAM ALANI (728x90)", adSpaceSmall: "ÖNERİLEN REKLAM", privacyLink: "Gizlilik Politikası", appSubtitle: "2025 Finansal Araç Seti",
+                menuYoutube: "YouTube Gelir", menuSalary: "Net Maaş", menuFreelance: "Freelance", tagPopular: "🔥 Popüler", tagNew: "✨ Yeni",
+                ytTitle: "YouTube Gelir Hesaplama", ytSubtitle: "2025 güncel reklam oranları ile tahmini kazancınızı analiz edin.", videoLong: "Video (Uzun)", videoShorts: "Shorts", labelViews: "Günlük İzlenme", labelCategory: "İçerik Kategorisi", labelRegion: "Hedef Kitle / Ülke", regionTR: "Türkiye", regionUS: "ABD", regionGlobal: "Global", labelRPM: "BGBM / RPM", rpmNote: "*Oyun kanalları düşük, Finans kanalları yüksek RPM alır.", resultMonthly: "Aylık Tahmini Gelir", resultDaily: "Günlük", resultYearly: "Yıllık", ytDisclaimerLong: "Bu hesaplama, RPM (1000 gösterim başına kazanç) değerine göre yapılmıştır. RPM, YouTube’un %45 gelir payı düşüldükten sonra içerik üreticisine kalan ortalama kazancı ifade eder. Gerçek gelir; kanal türü, izleyici ülkesi, reklam doluluğu ve mevsimsel faktörlere göre değişebilir.", labelEst: "Tahmini", whyTitle: "Neden Bu Kadar?", whyDesc: "YouTube gelirleri izleyici ülkesi, reklam talebi ve içerik türüne göre değişir. Finans ve Eğitim içerikleri genellikle daha yüksek RPM alır.",
+                catEnt: "Eğlence / Vlog", catEntDesc: "Standart reklam geliri", catGame: "Oyun", catGameDesc: "Düşük rekabet, düşük RPM", catEdu: "Eğitim / Bilgi", catEduDesc: "Stabil ve yüksek gelir", catFin: "Finans / Kripto", catFinDesc: "En yüksek reklam geliri",
+                salTitle: "2025 Net Maaş Hesaplama", salSubtitle: "2025 yılı tahmini vergi dilimleri ve asgari ücret istisnaları (TR).", labelGrossSalary: "Aylık Brüt Maaş (TL)", labelTaxExemption: "Gelir Vergisi İstisnası", descTaxExemption: "Asgari ücret kadar kısım vergiden düşülür.", tableItem: "Kalem", tableAmount: "Tutar", labelUnemp: "İşsizlik Sig. (%1)", labelIncomeTax: "Gelir Vergisi", labelStampTax: "Damga Vergisi", labelNetSalary: "Ele Geçen Net Maaş", labelTotalDeduct: "Toplam Kesinti:",
+                frTitle: "Freelance Saatlik Ücret", frSubtitle: "Giderler ve vergiler sonrası hedef net geliri yakalamak için gereken ücret.", labelTargetInc: "Aylık Hedef Net (TL)", headerParams: "Çalışma Parametreleri", labelWeeklyHours: "Haftalık Saat", labelVacation: "Yıllık Tatil (Hafta)", labelOverhead: "Gider & Vergi Marjı", labelMinHourly: "Min. Saatlik Ücret", labelYearlyGross: "Yıllık Brüt Ciro", labelBillableHours: "Faturalanabilir Saat",
+                faqTitle: "Sıkça Sorulan Sorular", faq1q: "RPM nedir?", faq1a: "<strong>RPM (Revenue Per Mille)</strong>, her 1000 video gösterimi başına sizin kazandığınız net paradır. YouTube'un %45'lik kesintisi yapıldıktan sonra elinize geçen net tutarı ifade eder.", faq2q: "CPM ve RPM farkı nedir?", faq2a: "<strong>CPM (Cost Per Mille)</strong>, reklam verenin 1000 gösterim için ödediği brüt tutardır. <strong>RPM</strong> ise bu tutardan YouTube'un kesintisi ve gösterilmeyen reklamlar düşüldükten sonra sizin cebinize giren paradır. Genellikle RPM, CPM'in %50-60'ı kadardır.", faq3q: "1000 izlenme kaç TL kazandırır?", faq3a: "Bu tamamen içeriğe ve izleyiciye bağlıdır. Türkiye'de ortalama 1000 izlenme <strong>15 TL ile 60 TL</strong> arasında kazandırır. ABD izleyicisi için bu rakam <strong>3 Dolar ile 15 Dolar</strong> (yaklaşık 100-500 TL) arasındadır.", faq4q: "Shorts gelirleri neden bu kadar düşük?", faq4a: "Shorts akışında reklamlar her videoda değil, videolar arasında gösterilir ve kullanıcılar hızlıca kaydırdığı için reklam etkileşimi düşüktür. Bu nedenle Shorts RPM'leri uzun videolara göre 10-20 kat daha düşüktür.", faq5q: "Türkiye ve ABD kazançları neden farklı?", faq5a: "Reklam ücretleri ülkelerin alım gücüne göre belirlenir. ABD'deki bir reklam veren, bir müşteriden daha fazla kâr elde edeceği için reklama daha fazla bütçe ayırır. Bu da oradaki YouTuber'ların daha yüksek RPM almasını sağlar.", faq6q: "Gelirlerim neden aydan aya değişiyor?", faq6a: "Reklam bütçeleri mevsimseldir. Firmalar yıl sonunda (Kasım-Aralık) bütçelerini bitirmek için çok harcar (RPM artar), yıl başında (Ocak) bütçeler sıfırlandığı için harcamalar düşer (RPM çakılır).",
+                btnShare: "Paylaş", footerAbout: "Hakkında", footerTerms: "Kullanım Şartları", footerPrivacy: "Gizlilik"
+            },
+            en: {
+                adSpace: "AD SPACE (728x90)", adSpaceSmall: "SUGGESTED AD", privacyLink: "Privacy Policy", appSubtitle: "2025 Financial Toolkit",
+                menuYoutube: "YouTube Revenue", menuSalary: "Net Salary", menuFreelance: "Freelance Rate", tagPopular: "🔥 Popular", tagNew: "✨ New",
+                ytTitle: "YouTube Income Calculator", ytSubtitle: "Analyze estimated earnings with 2025 ad rates.", videoLong: "Video (Long)", videoShorts: "Shorts", labelViews: "Daily Views", labelCategory: "Content Category", labelRegion: "Target Audience / Country", regionTR: "Turkey", regionUS: "USA", regionGlobal: "Global", labelRPM: "RPM / CPM", rpmNote: "*Gaming channels get lower, Finance channels get higher RPM.", resultMonthly: "Est. Monthly Revenue", resultDaily: "Daily", resultYearly: "Yearly", ytDisclaimerLong: "This calculation is based on RPM (Revenue Per Mille). RPM represents the average earnings remaining for the content creator after YouTube's 45% revenue share is deducted. Actual income may vary based on channel type, audience country, ad fill rate, and seasonal factors.", labelEst: "Estimated", whyTitle: "Why this amount?", whyDesc: "YouTube revenue varies by audience country, ad demand, and content type. Finance and Education content typically receive higher RPMs due to advertiser competition.",
+                catEnt: "Entertainment / Vlog", catEntDesc: "Standard ad revenue", catGame: "Gaming", catGameDesc: "Low competition, low RPM", catEdu: "Education / Knowledge", catEduDesc: "Stable and high revenue", catFin: "Finance / Crypto", catFinDesc: "Highest ad revenue",
+                salTitle: "Net Salary Calculator (TR)", salSubtitle: "Based on 2025 Turkey tax brackets and minimum wage exemptions.", labelGrossSalary: "Monthly Gross Salary (TL)", labelTaxExemption: "Income Tax Exemption", descTaxExemption: "Minimum wage portion is tax-free.", tableItem: "Item", tableAmount: "Amount", labelUnemp: "Unemployment Ins. (%1)", labelIncomeTax: "Income Tax", labelStampTax: "Stamp Tax", labelNetSalary: "Net Salary", labelTotalDeduct: "Total Deduction:",
+                frTitle: "Freelance Hourly Rate", frSubtitle: "Calculate required rate to hit net goals after tax & overhead.", labelTargetInc: "Target Monthly Net", headerParams: "Work Parameters", labelWeeklyHours: "Weekly Hours", labelVacation: "Yearly Vacation (Weeks)", labelOverhead: "Overhead & Tax Margin", labelMinHourly: "Min. Hourly Rate", labelYearlyGross: "Yearly Gross Revenue", labelBillableHours: "Billable Hours",
+                faqTitle: "Frequently Asked Questions", faq1q: "What is RPM?", faq1a: "<strong>RPM (Revenue Per Mille)</strong> is the net amount you earn per 1,000 video views after YouTube takes its 45% cut.", faq2q: "Difference between CPM and RPM?", faq2a: "<strong>CPM</strong> is what advertisers pay gross. <strong>RPM</strong> is what you actually keep. RPM is usually 50-60% of CPM.", faq3q: "How much is 1000 views worth?", faq3a: "It depends heavily on content and country. In Turkey, it's about <strong>15-60 TL</strong>. In the US, it's <strong>$3-15</strong>.", faq4q: "Why are Shorts earnings so low?", faq4a: "Ads in Shorts are swiped through quickly between videos, leading to lower engagement and thus much lower ad rates (10-20x lower than long videos).", faq5q: "Why is Turkey vs US different?", faq5a: "Ad rates are based on purchasing power. US advertisers pay more because US customers generate more profit per sale.", faq6q: "Why does revenue fluctuate?", faq6a: "Ad budgets are seasonal. They peak in Q4 (Nov-Dec) and drop significantly in Q1 (Jan) as budgets reset.",
+                btnShare: "Share", footerAbout: "About", footerTerms: "Terms", footerPrivacy: "Privacy"
+            }
+        };
+
+        let state = { lang: 'tr', yt: { videoType: 'long', region: 'TR', category: 'entertainment', currencySymbol: '₺' } };
+
+        function toggleLanguage() {
+            state.lang = state.lang === 'tr' ? 'en' : 'tr';
+            document.getElementById('lang-display').innerText = state.lang.toUpperCase();
+            document.querySelectorAll('[data-i18n]').forEach(el => { const key = el.getAttribute('data-i18n'); if(translations[state.lang][key]) el.innerHTML = translations[state.lang][key]; }); // Use innerHTML for FAQs
+            const cat = state.yt.category;
+            let icon="🎭", text="";
+            if(cat==='entertainment'){icon="🎭";text=translations[state.lang].catEnt;}
+            if(cat==='gaming'){icon="🎮";text=translations[state.lang].catGame;}
+            if(cat==='education'){icon="🎓";text=translations[state.lang].catEdu;}
+            if(cat==='finance'){icon="💰";text=translations[state.lang].catFin;}
+            document.getElementById('selected-icon').innerText = icon; document.getElementById('selected-text').innerText = text;
+            setCategory(); calculateYouTube(); calculateSalary(); calculateFreelance();
+        }
+
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            const activeContent = document.getElementById(`tab-${tabName}`); activeContent.classList.remove('hidden'); activeContent.classList.remove('animate-fade-in'); void activeContent.offsetWidth; activeContent.classList.add('animate-fade-in');
+            document.querySelectorAll('.nav-btn').forEach(btn => { btn.classList.remove('bg-white', 'shadow-sm', 'text-black', 'ring-1', 'ring-black/5'); btn.classList.add('text-gray-600'); });
+            document.getElementById(`btn-${tabName}`).classList.replace('text-gray-600', 'bg-white'); document.getElementById(`btn-${tabName}`).classList.add('shadow-sm', 'text-black', 'ring-1', 'ring-black/5');
+        }
+
+        function setVideoType(type) {
+            state.yt.videoType = type;
+            const btnLong = document.getElementById('btn-type-long'); const btnShorts = document.getElementById('btn-type-shorts');
+            if(type === 'long') { btnLong.classList.replace('text-gray-500', 'text-black'); btnLong.classList.replace('hover:text-gray-700', 'bg-white'); btnLong.classList.add('shadow-sm'); btnShorts.classList.replace('text-black', 'text-gray-500'); btnShorts.classList.replace('bg-white', 'hover:text-gray-700'); btnShorts.classList.remove('shadow-sm'); }
+            else { btnShorts.classList.replace('text-gray-500', 'text-black'); btnShorts.classList.replace('hover:text-gray-700', 'bg-white'); btnShorts.classList.add('shadow-sm'); btnLong.classList.replace('text-black', 'text-gray-500'); btnLong.classList.replace('bg-white', 'hover:text-gray-700'); btnLong.classList.remove('shadow-sm'); }
+            updateDefaultRPM();
+        }
+
+        function setRegion(reg) {
+            state.yt.region = reg;
+            document.querySelectorAll('.region-btn').forEach(btn => { btn.classList.remove('ring-2', 'ring-black', 'ring-offset-2'); });
+            document.getElementById(`btn-reg-${reg.toLowerCase()}`).classList.add('ring-2', 'ring-black', 'ring-offset-2');
+            state.yt.currencySymbol = (reg === 'US' || reg === 'GLOBAL') ? '$' : '₺';
+            document.getElementById('currency-symbol').innerText = state.yt.currencySymbol;
+            updateDefaultRPM();
+        }
+
+        function setCategory() {
+            const cat = document.getElementById('yt-category').value; state.yt.category = cat;
+            const txt = document.getElementById('rpm-dynamic-text'); const ind = document.getElementById('rpm-indicator');
+            if(cat === 'gaming') { txt.innerText = state.lang === 'tr' ? "*Oyun kategorisi düşük reklam geliri sağlar." : "*Gaming category has lower ad revenue."; ind.className = "text-[10px] px-2 py-0.5 rounded-full bg-red-100 text-red-600 font-bold"; ind.innerText = state.lang === 'tr' ? "Düşük" : "Low"; }
+            else if(cat === 'finance') { txt.innerText = state.lang === 'tr' ? "*Finans en yüksek kazandıran kategoridir." : "*Finance is the highest paying category."; ind.className = "text-[10px] px-2 py-0.5 rounded-full bg-green-100 text-green-600 font-bold"; ind.innerText = state.lang === 'tr' ? "Çok Yüksek" : "Very High"; }
+            else if(cat === 'education') { txt.innerText = state.lang === 'tr' ? "*Eğitim içerikleri yüksek RPM sunar." : "*Education content offers high RPM."; ind.className = "text-[10px] px-2 py-0.5 rounded-full bg-blue-100 text-blue-600 font-bold"; ind.innerText = state.lang === 'tr' ? "Yüksek" : "High"; }
+            else { txt.innerText = state.lang === 'tr' ? "*Eğlence içerikleri standart gelir sağlar." : "*Entertainment content provides standard revenue."; ind.className = "text-[10px] px-2 py-0.5 rounded-full bg-gray-200 text-gray-600 font-bold"; ind.innerText = state.lang === 'tr' ? "Standart" : "Standard"; }
+            updateDefaultRPM();
+        }
+
+        function updateDefaultRPM() {
+            const baseRates = { TR: 30, US: 5.00, GLOBAL: 2.00 };
+            const multipliers = { entertainment: 1.0, gaming: 0.6, education: 2.0, finance: 3.5 };
+            const shortsFactor = 0.03;
+            let val = baseRates[state.yt.region] * multipliers[state.yt.category];
+            if(state.yt.videoType === 'shorts') val *= shortsFactor;
+            val = Math.round(val * 100) / 100;
+            const slider = document.getElementById('yt-rpm-slider');
+            if(state.yt.region === 'TR') { slider.max = state.yt.videoType === 'shorts' ? 10 : 300; slider.step = state.yt.videoType === 'shorts' ? 0.01 : 1; }
+            else { slider.max = state.yt.videoType === 'shorts' ? 1 : 50; slider.step = state.yt.videoType === 'shorts' ? 0.001 : 0.1; }
+            document.getElementById('yt-rpm').value = val; slider.value = val;
+            calculateYouTube();
+        }
+
+        function syncRpm(source) {
+            const slider = document.getElementById('yt-rpm-slider'); const input = document.getElementById('yt-rpm');
+            document.getElementById('rpm-indicator').innerText = state.lang === 'tr' ? "Özel" : "Custom";
+            document.getElementById('rpm-indicator').className = "text-[10px] px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-700 font-bold";
+            if(source === 'slider') input.value = slider.value; else slider.value = input.value;
+            calculateYouTube();
+        }
+
+        function formatPrecise(num) { const opts = { style: 'currency', currency: state.yt.currencySymbol === '$' ? 'USD' : 'TRY', minimumFractionDigits: 2 }; return new Intl.NumberFormat(state.lang === 'tr' ? 'tr-TR' : 'en-US', opts).format(num); }
+        function formatCompact(num) {
+            const sym = state.yt.currencySymbol; let suffix = '', val = num;
+            if (num >= 1000000000) { val /= 1000000000; suffix = 'B'; } else if (num >= 1000000) { val /= 1000000; suffix = 'M'; } else if (num >= 1000) { val /= 1000; suffix = 'K'; }
+            const formatted = new Intl.NumberFormat(state.lang === 'tr' ? 'tr-TR' : 'en-US', { maximumFractionDigits: 1 }).format(val);
+            return `${sym}${formatted}${suffix}`;
+        }
+
+        function calculateYouTube() {
+            const views = Math.abs(parseFloat(document.getElementById('yt-views').value)) || 0;
+            const rpm = Math.abs(parseFloat(document.getElementById('yt-rpm').value)) || 0;
+            const daily = (views / 1000) * rpm;
+            document.getElementById('yt-daily').innerText = formatCompact(daily); document.getElementById('yt-monthly').innerText = formatCompact(daily * 30); document.getElementById('yt-yearly').innerText = formatCompact(daily * 365);
+            document.getElementById('yt-daily-wrapper').setAttribute('data-tooltip', formatPrecise(daily)); document.getElementById('yt-monthly-wrapper').setAttribute('data-tooltip', formatPrecise(daily * 30)); document.getElementById('yt-yearly-wrapper').setAttribute('data-tooltip', formatPrecise(daily * 365));
+        }
+
+        function formatCurrencyTR(amount) { return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY', minimumFractionDigits: 0, maximumFractionDigits: 0 }).format(amount); }
+        function updateResult(id, val) { const el = document.getElementById(id); el.innerText = val; el.classList.add('highlight'); setTimeout(() => el.classList.remove('highlight'), 300); }
+
+        function calculateSalary() {
+            const gross = Math.abs(parseFloat(document.getElementById('sal-gross').value)) || 0;
+            if(gross === 0) { document.querySelectorAll('#tab-salary [id^="sal-"]').forEach(el => el.innerText = '₺0'); return; }
+            const MW = 26500.00, SGK=0.14, UNEMP=0.01, TAX=0.15, STAMP=0.00759;
+            const sgkD = gross * SGK, unempD = gross * UNEMP, taxBase = gross - (sgkD + unempD);
+            let calcTax = taxBase * TAX, calcStamp = gross * STAMP;
+            let exTax = 0, exStamp = 0;
+            if(document.getElementById('sal-exemption').checked) {
+                const mwTaxBase = MW - (MW * SGK + MW * UNEMP);
+                exTax = mwTaxBase * TAX; exStamp = MW * STAMP;
+            }
+            const finalTax = Math.max(0, calcTax - exTax), finalStamp = Math.max(0, calcStamp - exStamp);
+            const totalDed = sgkD + unempD + finalTax + finalStamp;
+            document.getElementById('sal-sgk').innerText = `-${formatCurrencyTR(sgkD)}`; document.getElementById('sal-issizlik').innerText = `-${formatCurrencyTR(unempD)}`; document.getElementById('sal-gv').innerText = `-${formatCurrencyTR(finalTax)}`; document.getElementById('sal-dv').innerText = `-${formatCurrencyTR(finalStamp)}`;
+            updateResult('sal-net', formatCurrencyTR(gross - totalDed)); document.getElementById('sal-total-deduct').innerText = formatCurrencyTR(totalDed);
+        }
+
+        function calculateFreelance() {
+            const target = Math.abs(parseFloat(document.getElementById('fr-target').value)) || 0;
+            const hours = Math.abs(parseFloat(document.getElementById('fr-hours').value)) || 1;
+            const vacation = Math.abs(parseFloat(document.getElementById('fr-vacation').value)) || 0;
+            const overhead = Math.abs(parseFloat(document.getElementById('fr-overhead').value)) || 0;
+            document.getElementById('fr-overhead-val').innerText = `%${overhead}`;
+            const totalHours = hours * (52 - vacation);
+            const yearlyGross = overhead < 100 ? (target * 12) / (1 - (overhead / 100)) : 0;
+            updateResult('fr-hourly', formatCurrencyTR(totalHours > 0 ? yearlyGross / totalHours : 0));
+            document.getElementById('fr-yearly-gross').innerText = formatCurrencyTR(yearlyGross); document.getElementById('fr-total-hours').innerText = Math.round(totalHours);
+        }
+
+        // Init
+        switchTab('youtube'); setRegion('TR');
+    </script>
+</body>
+</html>
